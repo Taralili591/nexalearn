@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - NexaLearn AI Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600&family=Roboto+Mono:wght@400;500&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@1.7.0"></script>
+</head>
+<body class="min-h-screen font-sans antialiased" style="background: var(--traeui-background-1);">
+    <main class="relative flex flex-col min-h-screen">
+      <header class="flex items-center justify-between px-6 lg:px-8 py-4 shrink-0" style="min-height: 64px;">
+        <a href="封面.html" class="traeui-h5 text-base tracking-wide" style="color: var(--traeui-accent-1);">NexaLearn</a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="公司介绍.html" style="color: var(--traeui-accent-2); font-family: var(--font-mono); font-size: 12px;">关于我们</a>
+          <a href="核心服务.html" style="color: var(--traeui-accent-2); font-family: var(--font-mono); font-size: 12px;">核心服务</a>
+          <a href="学习平台.html" style="color: var(--traeui-accent-2); font-family: var(--font-mono); font-size: 12px;">学习平台</a>
+          <span style="color: var(--traeui-background-4); font-family: var(--font-mono); font-size: 12px;">联系我们</span>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden p-2" style="color: var(--traeui-accent-1);" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </header>
+
+      <div id="mobile-menu" class="hidden md:hidden absolute top-16 right-0 z-30 w-64 p-4" style="background: var(--traeui-background-2); border-radius: var(--traeui-radius-md);">
+        <nav class="flex flex-col gap-4">
+          <a href="封面.html" class="traeui-body-lg" style="color: var(--traeui-accent-1); padding: 8px 12px; border-radius: var(--traeui-radius-sm);" onmouseover="this.style.background='var(--traeui-background-3)'" onmouseout="this.style.background='transparent'">首页</a>
+          <a href="公司介绍.html" class="traeui-body-lg" style="color: var(--traeui-accent-1); padding: 8px 12px; border-radius: var(--traeui-radius-sm);" onmouseover="this.style.background='var(--traeui-background-3)'" onmouseout="this.style.background='transparent'">关于我们</a>
+          <a href="核心服务.html" class="traeui-body-lg" style="color: var(--traeui-accent-1); padding: 8px 12px; border-radius: var(--traeui-radius-sm);" onmouseover="this.style.background='var(--traeui-background-3)'" onmouseout="this.style.background='transparent'">核心服务</a>
+          <a href="学习平台.html" class="traeui-body-lg" style="color: var(--traeui-accent-1); padding: 8px 12px; border-radius: var(--traeui-radius-sm);" onmouseover="this.style.background='var(--traeui-background-3)'" onmouseout="this.style.background='transparent'">学习平台</a>
+        </nav>
+      </div>
+
+      <section class="flex-1 flex flex-col items-center justify-center px-6 text-center">
+        <h1 class="traeui-h2 mb-6" style="color: var(--traeui-accent-1); text-wrap: balance; word-break: keep-all; overflow-wrap: break-word; font-size: clamp(28px, 4vw, 48px);">
+          开启你的 AI 学习之旅
+        </h1>
+        <p class="traeui-body-lg mb-12 max-w-lg" style="color: var(--traeui-accent-2); font-family: var(--font-body); font-size: clamp(14px, 1.4vw, 18px); line-height: 1.6;">
+          从今天开始，让 AI 成为你的核心竞争力
+        </p>
+
+        <form id="contact-form" class="w-full max-w-md mb-12">
+          <div class="flex flex-col gap-4">
+            <input
+              type="text"
+              id="name"
+              placeholder="您的姓名"
+              class="w-full px-4 py-3 rounded-lg bg-transparent border"
+              style="border-color: var(--traeui-background-3); color: var(--traeui-accent-1); font-family: var(--font-body); font-size: 14px; transition: border-color 0.2s;"
+              onfocus="this.style.borderColor='var(--traeui-background-4)'"
+              onblur="this.style.borderColor='var(--traeui-background-3)'"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="电子邮箱"
+              class="w-full px-4 py-3 rounded-lg bg-transparent border"
+              style="border-color: var(--traeui-background-3); color: var(--traeui-accent-1); font-family: var(--font-body); font-size: 14px; transition: border-color 0.2s;"
+              onfocus="this.style.borderColor='var(--traeui-background-4)'"
+              onblur="this.style.borderColor='var(--traeui-background-3)'"
+              required
+            />
+            <textarea
+              id="message"
+              placeholder="您感兴趣的课程或服务"
+              rows="3"
+              class="w-full px-4 py-3 rounded-lg bg-transparent border resize-none"
+              style="border-color: var(--traeui-background-3); color: var(--traeui-accent-1); font-family: var(--font-body); font-size: 14px; transition: border-color 0.2s;"
+              onfocus="this.style.borderColor='var(--traeui-background-4)'"
+              onblur="this.style.borderColor='var(--traeui-background-3)'"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              id="submit-btn"
+              class="inline-flex items-center justify-center whitespace-nowrap transition-transform duration-150 ease-out hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2"
+              style="
+                background: var(--traeui-background-4);
+                color: var(--traeui-text-on-accent-2);
+                border-radius: var(--radius-full);
+                padding: 14px 24px;
+                font-family: var(--font-body);
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+                outline-color: var(--traeui-accent-2);
+                border: none;
+                cursor: pointer;
+              "
+            >
+              立即体验
+            </button>
+          </div>
+        </form>
+
+        <div id="success-message" class="hidden mb-12 p-6 rounded-lg" style="background: var(--traeui-background-2); border: 1px solid var(--traeui-background-4);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" class="mx-auto mb-4" style="color: var(--traeui-background-4);">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <polyline points="22,4 12,14.01 9,11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          </svg>
+          <p style="color: var(--traeui-accent-1); font-family: var(--font-body); font-size: 16px;">感谢您的留言！我们会尽快与您联系。</p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 lg:gap-6">
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--traeui-accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20V10"></path>
+              <path d="M18 20V4"></path>
+              <path d="M6 20v-6"></path>
+            </svg>
+            <span class="traeui-body-lg" style="color: var(--traeui-text-paragraph); font-family: var(--font-mono); font-size: clamp(12px, 1vw, 14px);">www.nexalearn.ai</span>
+          </div>
+          <span class="w-1 h-1 rounded-full shrink-0" style="background: var(--traeui-background-3);"></span>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--traeui-accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span class="traeui-body-lg" style="color: var(--traeui-text-paragraph); font-family: var(--font-mono); font-size: clamp(12px, 1vw, 14px);">contact@nexalearn.ai</span>
+          </div>
+          <span class="w-1 h-1 rounded-full shrink-0" style="background: var(--traeui-background-3);"></span>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--traeui-accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 15s1.5-2 4-2 4 2 4 2"></path>
+              <path d="M9 9h.01"></path>
+              <path d="M15 9h.01"></path>
+            </svg>
+            <span class="traeui-body-lg" style="color: var(--traeui-text-paragraph); font-family: var(--font-mono); font-size: clamp(12px, 1vw, 14px);">WeChat: NexaLearn_AI</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="flex items-center justify-between px-6 lg:px-8 py-4 shrink-0">
+        <a href="数据与成果.html" class="traeui-body" style="color: var(--traeui-accent-2); font-size: 12px; transition: color 0.2s;" onmouseover="this.style.color='var(--traeui-accent-1)'" onmouseout="this.style.color='var(--traeui-accent-2)'">PREV</a>
+        <p class="traeui-body" style="color: var(--traeui-text-paragraph); font-size: 12px;">
+          感谢你的关注
+        </p>
+        <span class="traeui-body" style="color: var(--traeui-accent-2); font-family: var(--font-mono); font-size: 12px;">
+          07 / 07
+        </span>
+      </footer>
+
+    </main>
+    <script>
+      lucide.createIcons();
+      document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        
+        form.style.display = 'none';
+        successMessage.classList.remove('hidden');
+        
+        setTimeout(() => {
+          successMessage.classList.add('hidden');
+          form.style.display = 'flex';
+          form.reset();
+        }, 5000);
+      });
+    </script>
+</body>
+</html>

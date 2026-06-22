@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>核心服务 - NexaLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600&family=Roboto+Mono:wght@400;500&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@1.7.0"></script>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main class="min-h-screen flex flex-col" style="background: var(--traeui-background-1);">
+      <header class="flex items-center justify-between px-6 lg:px-8 py-4 shrink-0" style="background: var(--traeui-background-1);">
+        <a href="封面.html" class="traeui-h5 text-lg tracking-wide" style="color: var(--traeui-accent-1);">NexaLearn</a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="公司介绍.html" style="color: var(--traeui-accent-2); font-family: var(--font-mono); font-size: 12px;">关于我们</a>
+          <a href="核心服务.html" style="color: var(--traeui-background-4); font-family: var(--font-mono); font-size: 12px;">核心服务</a>
+          <a href="学习平台.html" style="color: var(--traeui-accent-2); font-family: var(--font-mono); font-size: 12px;">学习平台</a>
+          <a href="联系我们.html" class="page-btn" style="padding: 6px 16px; font-size: 11px;">联系</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden p-2" style="color: var(--traeui-accent-1);" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </header>
+
+      <div id="mobile-menu" class="hidden md:hidden absolute top-14 right-0 z-30 w-64 p-4" style="background: var(--traeui-background-2); border-radius: var(--traeui-radius-md);">
+        <nav class="flex flex-col gap-4">
+          <a href="封面.html" class="traeui-body-lg" style="color: var(--traeui-accent-1); padding: 8px 12px; border-radius: var(--traeui-radius-sm);" onmouseover="this.style.background='var(--traeui-background-3)'" onmouseout="this.style.background='transparent'">首页</a>
+          <a href="公司介绍.html" class="traeui-body-lg" style="color: var(--traeui-accent-1); padding: 8px 12px; border-radius: var(--traeui-radius-sm);" onmouseover="this.style.background='var(--traeui-background-3)'" onmouseout="this.style.background='transparent'">关于我们</a>
+          <a href="学习平台.html" class="traeui-body-lg" style="color: var(--traeui-accent-1); padding: 8px 12px; border-radius: var(--traeui-radius-sm);" onmouseover="this.style.background='var(--traeui-background-3)'" onmouseout="this.style.background='transparent'">学习平台</a>
+          <a href="联系我们.html" class="page-btn" style="margin-top: 8px;">联系</a>
+        </nav>
+      </div>
+
+      <div class="flex-1 flex flex-col items-center justify-center px-6 py-6">
+        <h1 class="traeui-h2 text-center mb-10" style="color: var(--traeui-accent-1); font-size: clamp(40px, 5vw, 72px); text-wrap: balance; word-break: keep-all; overflow-wrap: break-word;">核心服务</h1>
+
+        <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-color var(--traeui-background-4)" style="background: var(--traeui-background-2); border: 1px solid var(--traeui-background-3); border-radius: var(--traeui-radius-md);">
+            <div class="shrink-0" style="height: 4px; background: var(--traeui-background-4); border-radius: var(--traeui-radius-md) var(--traeui-radius-md) 0 0;"></div>
+            <div class="flex items-start gap-3 p-5">
+              <span class="shrink-0 inline-flex items-center justify-center" style="width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--traeui-background-4); color: var(--traeui-text-on-accent-2); font-family: var(--font-mono); font-size: 12px; font-weight: 600;">01</span>
+              <div class="flex flex-col gap-2 min-w-0">
+                <h2 class="traeui-h5 text-base truncate" style="color: var(--traeui-accent-1);">AI 职场效率课程</h2>
+                <p class="traeui-body line-clamp-2" style="color: var(--traeui-text-paragraph); line-height: 1.6;">面向运营、产品、市场等岗位，教授 AI 完成文档写作、数据分析、内容生成等任务</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-color var(--traeui-background-4)" style="background: var(--traeui-background-2); border: 1px solid var(--traeui-background-3); border-radius: var(--traeui-radius-md);">
+            <div class="shrink-0" style="height: 4px; background: var(--traeui-background-4); border-radius: var(--traeui-radius-md) var(--traeui-radius-md) 0 0;"></div>
+            <div class="flex items-start gap-3 p-5">
+              <span class="shrink-0 inline-flex items-center justify-center" style="width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--traeui-background-4); color: var(--traeui-text-on-accent-2); font-family: var(--font-mono); font-size: 12px; font-weight: 600;">02</span>
+              <div class="flex flex-col gap-2 min-w-0">
+                <h2 class="traeui-h5 text-base truncate" style="color: var(--traeui-accent-1);">企业 AI 内训</h2>
+                <p class="traeui-body line-clamp-2" style="color: var(--traeui-text-paragraph); line-height: 1.6;">定制化 AI 培训方案，管理层认知课、团队工作流课、AI Agent 应用课</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-color var(--traeui-background-4)" style="background: var(--traeui-background-2); border: 1px solid var(--traeui-background-3); border-radius: var(--traeui-radius-md);">
+            <div class="shrink-0" style="height: 4px; background: var(--traeui-background-4); border-radius: var(--traeui-radius-md) var(--traeui-radius-md) 0 0;"></div>
+            <div class="flex items-start gap-3 p-5">
+              <span class="shrink-0 inline-flex items-center justify-center" style="width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--traeui-background-4); color: var(--traeui-text-on-accent-2); font-family: var(--font-mono); font-size: 12px; font-weight: 600;">03</span>
+              <div class="flex flex-col gap-2 min-w-0">
+                <h2 class="traeui-h5 text-base truncate" style="color: var(--traeui-accent-1);">AI 项目实战营</h2>
+                <p class="traeui-body line-clamp-2" style="color: var(--traeui-text-paragraph); line-height: 1.6;">4-8 周训练营，搭建 AI 客服助手、营销系统、知识库等真实项目</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:col-start-1 md:col-end-2 transition-all duration-200 hover:-translate-y-1 hover:border-color var(--traeui-background-4)" style="background: var(--traeui-background-2); border: 1px solid var(--traeui-background-3); border-radius: var(--traeui-radius-md);">
+            <div class="shrink-0" style="height: 4px; background: var(--traeui-background-4); border-radius: var(--traeui-radius-md) var(--traeui-radius-md) 0 0;"></div>
+            <div class="flex items-start gap-3 p-5">
+              <span class="shrink-0 inline-flex items-center justify-center" style="width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--traeui-background-4); color: var(--traeui-text-on-accent-2); font-family: var(--font-mono); font-size: 12px; font-weight: 600;">04</span>
+              <div class="flex flex-col gap-2 min-w-0">
+                <h2 class="traeui-h5 text-base truncate" style="color: var(--traeui-accent-1);">AI 学习平台</h2>
+                <p class="traeui-body line-clamp-2" style="color: var(--traeui-text-paragraph); line-height: 1.6;">在线视频、直播课、作业系统、AI 助教、学习追踪、证书体系</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:col-start-2 md:col-end-3 transition-all duration-200 hover:-translate-y-1 hover:border-color var(--traeui-background-4)" style="background: var(--traeui-background-2); border: 1px solid var(--traeui-background-3); border-radius: var(--traeui-radius-md);">
+            <div class="shrink-0" style="height: 4px; background: var(--traeui-background-4); border-radius: var(--traeui-radius-md) var(--traeui-radius-md) 0 0;"></div>
+            <div class="flex items-start gap-3 p-5">
+              <span class="shrink-0 inline-flex items-center justify-center" style="width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--traeui-background-4); color: var(--traeui-text-on-accent-2); font-family: var(--font-mono); font-size: 12px; font-weight: 600;">05</span>
+              <div class="flex flex-col gap-2 min-w-0">
+                <h2 class="traeui-h5 text-base truncate" style="color: var(--traeui-accent-1);">AI 人才认证</h2>
+                <p class="traeui-body line-clamp-2" style="color: var(--traeui-text-paragraph); line-height: 1.6;">能力认证，帮助个人求职转岗，帮助企业识别 AI 应用人才</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex justify-center mt-10">
+          <a href="学习平台.html" data-dom-id="cta-platform" class="inline-flex items-center justify-center whitespace-nowrap transition-transform duration-150 hover:translate-y-[-1px] active:translate-y-0 focus-visible:outline focus-visible:outline-2" style="background: var(--traeui-background-4); color: var(--traeui-text-on-accent-2); font-family: var(--font-mono); font-size: 14px; font-weight: 600; padding: 12px 32px; border-radius: var(--radius-full); outline-color: var(--traeui-accent-2); outline-offset: 2px;">NEXT</a>
+        </div>
+
+      </div>
+
+      <footer class="flex items-center justify-between px-6 lg:px-8 py-4 shrink-0">
+        <a href="公司介绍.html" class="traeui-body" style="color: var(--traeui-accent-2); font-size: 12px; transition: color 0.2s;" onmouseover="this.style.color='var(--traeui-accent-1)'" onmouseout="this.style.color='var(--traeui-accent-2)'">PREV</a>
+        <span class="traeui-body" style="color: var(--traeui-accent-2);">03 / 07</span>
+      </footer>
+
+    </main>
+    <script>
+      lucide.createIcons();
+      document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+    </script>
+</body>
+</html>
