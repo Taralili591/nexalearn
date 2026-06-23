@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>报名成功</title>
+    <style id="theme-vars">
+:root {
+  --traeui-background: #000000;
+  --traeui-background-1: #000000;
+  --traeui-background-2: #202020;
+  --traeui-background-3: #404040;
+  --traeui-background-4: #202020;
+  --traeui-background-5: #1d1d1d;
+  --traeui-foreground: #ffffff;
+  --traeui-accent-1: #ffffff;
+  --traeui-accent-2: #95ff8d;
+  --traeui-accent-3: #95ff8d;
+  --traeui-text-on-accent-1: #ffffff;
+  --traeui-text-on-accent-2: #ffffff;
+  --traeui-text-on-accent-3: #ffffff;
+  --traeui-text-paragraph: #999999;
+  --traeui-divder-lines: #e9e9e9;
+  --traeui-button-secondary-hover: #2b2b2b;
+  --traeui-font-display: 'Righteous', sans-serif;
+  --traeui-font-heading: 'Righteous', sans-serif;
+  --traeui-font-body: 'Roboto Flex', sans-serif;
+  --traeui-font-mono: 'Roboto Mono', monospace;
+  --traeui-font-size-heading-1: 131.5px;
+  --traeui-font-size-heading-2: 120px;
+  --traeui-font-size-heading-3: 48px;
+  --traeui-font-size-heading-4: 32px;
+  --traeui-font-size-heading-5: 25.97px;
+  --traeui-font-size-heading-6: 16px;
+  --traeui-font-size-body-large: 14px;
+  --traeui-font-size-body: 12px;
+  --traeui-font-weight-heading-1: 400;
+  --traeui-font-weight-heading-2: 400;
+  --traeui-font-weight-heading-3: 600;
+  --traeui-font-weight-heading-4: 600;
+  --traeui-font-weight-heading-5: 400;
+  --traeui-font-weight-heading-6: 500;
+  --traeui-font-weight-body-large: 400;
+  --traeui-font-weight-body: 500;
+  --traeui-line-height-heading-1: 0.9;
+  --traeui-line-height-heading-2: 0.9;
+  --traeui-line-height-heading-3: 1;
+  --traeui-line-height-heading-4: 1.2;
+  --traeui-line-height-heading-5: 0.9;
+  --traeui-line-height-heading-6: 1.4;
+  --traeui-line-height-body-large: 0.9;
+  --traeui-line-height-body: 1.4;
+  --traeui-radius-sm: 5px;
+  --traeui-radius-md: 8px;
+  --traeui-radius-xl: 24.5px;
+  --traeui-space-1: 4px;
+  --traeui-space-2: 5px;
+  --traeui-space-3: 6px;
+  --traeui-space-4: 8px;
+  --traeui-space-5: 10px;
+  --traeui-space-6: 12px;
+  --traeui-space-7: 16px;
+  --traeui-space-8: 19px;
+  --traeui-space-9: 20px;
+  --traeui-space-10: 24px;
+  --traeui-space-11: 30px;
+  --traeui-space-12: 40px;
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@1.7.0"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--traeui-background);
+    --color-foreground: var(--traeui-foreground);
+  }
+  @layer base {
+    body { background: var(--traeui-background); color: var(--traeui-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main>
+
+      <!-- ========== HEADER NAV (sticky) ========== -->
+      <header
+        class="sticky top-0 z-50 w-full"
+        style="background-color: var(--traeui-background-4); border-bottom: 1px solid var(--traeui-background-3);"
+      >
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <!-- Logo -->
+          <a href="#" class="shrink-0" style="font-family: var(--font-display, 'Righteous', sans-serif); color: var(--traeui-accent-2); font-size: 1.5rem; text-decoration: none;">
+            NexaLearn
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden items-center gap-8 md:flex">
+            <a
+              href="#hero"
+              data-nav-key="hero"
+              data-dom-id="nav-hero"
+              class="nav-link"
+              style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 0.875rem; font-weight: 500; text-decoration: none; color: var(--traeui-text-paragraph); transition: color 0.2s;"
+            >首页</a>
+            <a
+              href="#courses"
+              data-nav-key="courses"
+              data-dom-id="nav-courses"
+              class="nav-link"
+              style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 0.875rem; font-weight: 500; text-decoration: none; color: var(--traeui-text-paragraph); transition: color 0.2s;"
+            >课程</a>
+            <a
+              href="#schedule"
+              data-nav-key="schedule"
+              data-dom-id="nav-schedule"
+              class="nav-link"
+              style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 0.875rem; font-weight: 500; text-decoration: none; color: var(--traeui-text-paragraph); transition: color 0.2s;"
+            >学习进程</a>
+            <a
+              href="#signup"
+              data-nav-key="signup"
+              data-active="true"
+              class="nav-link nav-link-active"
+              style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 0.875rem; font-weight: 500; text-decoration: none; color: var(--traeui-text-paragraph); transition: color 0.2s;"
+            >报名</a>
+          </nav>
+
+          <!-- CTA Button + Mobile Hamburger -->
+          <div class="flex items-center gap-4">
+            <a
+              href="#signup"
+              data-dom-id="cta-signup-nav"
+              class="hidden rounded-full px-6 py-2 text-sm font-semibold transition-opacity hover:opacity-90 md:inline-block"
+              style="background-color: var(--traeui-accent-2); color: var(--traeui-background-1); font-family: var(--font-body, 'Roboto Flex', sans-serif); text-decoration: none;"
+            >立即报名</a>
+
+            <!-- Mobile hamburger -->
+            <button
+              class="flex flex-col items-center justify-center gap-1.5 md:hidden"
+              data-dom-id="mobile-menu-toggle"
+              aria-label="打开菜单"
+              style="background: none; border: none; cursor: pointer; padding: 4px;"
+            >
+              <span class="block h-0.5 w-6 rounded-full" style="background-color: var(--traeui-accent-2);"></span>
+              <span class="block h-0.5 w-6 rounded-full" style="background-color: var(--traeui-accent-2);"></span>
+              <span class="block h-0.5 w-6 rounded-full" style="background-color: var(--traeui-accent-2);"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <nav
+          class="hidden flex-col gap-4 px-6 pb-6 md:hidden"
+          data-dom-id="mobile-menu"
+        >
+          <a
+            href="#hero"
+            data-nav-key="hero"
+            data-dom-id="nav-hero"
+            class="nav-link"
+            style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 1rem; font-weight: 500; text-decoration: none; color: var(--traeui-text-paragraph); transition: color 0.2s;"
+          >首页</a>
+          <a
+            href="#courses"
+            data-nav-key="courses"
+            data-dom-id="nav-courses"
+            class="nav-link"
+            style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 1rem; font-weight: 500; text-decoration: none; color: var(--traeui-text-paragraph); transition: color 0.2s;"
+          >课程</a>
+          <a
+            href="#schedule"
+            data-nav-key="schedule"
+            data-dom-id="nav-schedule"
+            class="nav-link"
+            style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 1rem; font-weight: 500; text-decoration: none; color: var(--traeui-text-paragraph); transition: color 0.2s;"
+          >学习进程</a>
+          <a
+            href="#signup"
+            data-nav-key="signup"
+            data-active="true"
+            class="nav-link nav-link-active"
+            style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 1rem; font-weight: 500; text-decoration: none; color: var(--traeui-text-paragraph); transition: color 0.2s;"
+          >报名</a>
+          <a
+            href="#signup"
+            data-dom-id="cta-signup-mobile"
+            class="mt-2 inline-block rounded-full px-6 py-2.5 text-center text-sm font-semibold transition-opacity hover:opacity-90"
+            style="background-color: var(--traeui-accent-2); color: var(--traeui-background-1); font-family: var(--font-body, 'Roboto Flex', sans-serif); text-decoration: none;"
+          >立即报名</a>
+        </nav>
+      </header>
+
+      <!-- ========== SUCCESS SECTION ========== -->
+      <section
+        class="flex w-full items-center justify-center"
+        style="background-color: var(--traeui-background-1); min-height: calc(100vh - 65px);"
+      >
+        <div class="mx-auto max-w-lg px-6 py-20 text-center lg:px-8">
+          <!-- Green checkmark icon with glow -->
+          <div class="mb-8 flex justify-center">
+            <svg
+              class="checkmark-glow"
+              width="96"
+              height="96"
+              viewBox="0 0 96 96"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <circle cx="48" cy="48" r="44" stroke="var(--traeui-accent-2)" stroke-width="3" fill="rgba(149, 255, 141, 0.06)" />
+              <path d="M30 50 L42 62 L66 36" stroke="var(--traeui-accent-2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+          </div>
+
+          <!-- Success title -->
+          <h1
+            class="mb-4"
+            style="font-family: var(--font-display, 'Righteous', sans-serif); color: var(--traeui-accent-1); font-size: clamp(25.97px, 5vw, 32px); font-weight: 600; line-height: 1.2;"
+          >
+            报名成功
+          </h1>
+
+          <!-- Description -->
+          <p
+            class="mb-3"
+            style="font-family: var(--font-body, 'Roboto Flex', sans-serif); color: var(--traeui-text-paragraph); font-size: 14px; font-weight: 400; line-height: 1.4;"
+          >
+            我们会在开课前发送直播链接。
+          </p>
+
+          <!-- Additional info -->
+          <p
+            class="mb-10"
+            style="font-family: var(--font-body, 'Roboto Flex', sans-serif); color: var(--traeui-text-paragraph); opacity: 0.7; font-size: 12px; font-weight: 500; line-height: 1.4;"
+          >
+            请留意您的手机短信和邮箱通知。
+          </p>
+
+          <!-- Back to home button -->
+          <a
+            href="#hero"
+            data-dom-id="back-home"
+            class="btn-outlined inline-block rounded-full px-8 py-3 transition-all"
+            style="border: 1.5px solid var(--traeui-accent-2); background-color: transparent; color: var(--traeui-accent-2); font-family: var(--font-body, 'Roboto Flex', sans-serif); text-decoration: none; font-size: 14px; font-weight: 500;"
+          >
+            返回首页
+          </a>
+        </div>
+      </section>
+
+      <!-- ========== FOOTER ========== -->
+      <footer style="background-color: var(--traeui-background-1); border-top: 1px solid var(--traeui-background-3);">
+        <div class="mx-auto max-w-7xl px-6 py-8 text-center lg:px-8">
+          <p style="font-family: var(--font-body, 'Roboto Flex', sans-serif); font-size: 0.75rem; color: var(--traeui-text-paragraph);">
+            &copy; 2025 NexaLearn AI Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+
+    </main>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      /* Active nav link style */
+      .nav-link-active {
+        color: var(--traeui-accent-2) !important;
+      }
+
+      /* Success checkmark glow */
+      .checkmark-glow {
+        filter: drop-shadow(0 0 16px rgba(149, 255, 141, 0.4)) drop-shadow(0 0 40px rgba(149, 255, 141, 0.15));
+      }
+
+      /* Outlined button hover */
+      .btn-outlined:hover {
+        background-color: rgba(149, 255, 141, 0.08);
+      }
+    </style>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

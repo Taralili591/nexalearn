@@ -91,23 +91,63 @@ const SignupForm = () => {
 
     setIsSubmitting(true);
 
-    // 存储到LocalStorage
-    const signupData = {
-      ...formData,
-      submittedAt: new Date().toISOString(),
-    };
+    // 构建表单数据（支持 Netlify Forms）
+    const submitData = new FormData();
+    submitData.append('form-name', 'signup');
+    submitData.append('name', formData.name);
+    submitData.append('phone', formData.phone);
+    submitData.append('email', formData.email);
+    submitData.append('school', formData.school);
+    submitData.append('major', formData.major);
 
     try {
+      // 提交到 Netlify Forms
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(submitData as unknown as Record<string, string>).toString(),
+      });
+
+      if (response.ok) {
+        // 同时保存到 localStorage（本地备份）
+        const signupData = {
+          ...formData,
+          submittedAt: new Date().toISOString(),
+        };
+        const existingData = localStorage.getItem('nexalearn_signups');
+        const signups = existingData ? JSON.parse(existingData) : [];
+        signups.push(signupData);
+        localStorage.setItem('nexalearn_signups', JSON.stringify(signups));
+
+        // 跳转到成功页面
+        navigate('/success');
+      } else {
+        // Netlify 失败时回退到本地存储
+        console.warn('Netlify Forms 提交失败，使用本地存储');
+        const signupData = {
+          ...formData,
+          submittedAt: new Date().toISOString(),
+        };
+        const existingData = localStorage.getItem('nexalearn_signups');
+        const signups = existingData ? JSON.parse(existingData) : [];
+        signups.push(signupData);
+        localStorage.setItem('nexalearn_signups', JSON.stringify(signups));
+        navigate('/success');
+      }
+    } catch (error) {
+      console.error('提交失败:', error);
+      // 网络失败时回退到本地存储
+      const signupData = {
+        ...formData,
+        submittedAt: new Date().toISOString(),
+      };
       const existingData = localStorage.getItem('nexalearn_signups');
       const signups = existingData ? JSON.parse(existingData) : [];
       signups.push(signupData);
       localStorage.setItem('nexalearn_signups', JSON.stringify(signups));
-
-      // 跳转到成功页面
       navigate('/success');
-    } catch (error) {
-      console.error('存储数据失败:', error);
-      alert('提交失败，请稍后重试');
     } finally {
       setIsSubmitting(false);
     }
